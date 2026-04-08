@@ -102,4 +102,19 @@ jobs:
           docker compose down
           docker compose pull        # pulls latest image from DockerHub
           docker compose up -d --build
+
+     k8s-deploy:
+       name: Deployment on K8s
+       runs-on: self-hosted
+       needs: deploy
+
+       if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+
+       steps:
+         - uses: actions/checkout@v4
+
+         - name: Executer K8s manifest file
+           run: |
+             kubeectl version
+         
     
