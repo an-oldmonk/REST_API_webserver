@@ -103,7 +103,8 @@ jobs:
           docker compose pull        # pulls latest image from DockerHub
           docker compose up -d --build
 
-     k8s-deploy:
+
+  k8s-deploy:
        name: Deployment on K8s
        runs-on: self-hosted
        needs: deploy
