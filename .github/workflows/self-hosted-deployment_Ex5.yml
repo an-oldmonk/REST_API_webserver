@@ -114,9 +114,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: show date
+        run: |
+          date
+
       - name: Executer K8s manifest file
         run: |
-          kubectl version
-          date
+         kubectl apply -f Ex6-api-deployment.yml
+        
          
     
