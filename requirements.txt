@@ -3,6 +3,7 @@ Flask-SQLAlchemy>=3.1
 SQLAlchemy>=2.0
 pytest>=8.0
 psycopg2-binary
+alembic
 
 
 #docker, Make, docker-compose cant be written here bcz
