@@ -4,6 +4,7 @@ SQLAlchemy>=2.0
 pytest>=8.0
 psycopg2-binary
 alembic
+psycopg2-binary
 
 
 #docker, Make, docker-compose cant be written here bcz
