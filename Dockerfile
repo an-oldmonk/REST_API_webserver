@@ -5,7 +5,7 @@ FROM python:3.11-slim as builder
 WORKDIR /app
 
 COPY requirements.txt ./
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 
 # stage 2: Final runtime image
